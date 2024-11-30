@@ -1,0 +1,56 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@layer base {
+  @font-face {
+    font-family: "CoconNext";
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: local("CoconNext"), url(./fonts/CoconNextArabic-Bold.ttf) format("truetype");
+  }
+  @font-face {
+    font-family: "InterVariable";
+    font-style: normal;
+    font-weight: 100 400 600 900;
+    font-display: swap;
+    src: local("InterVariable"), url(./fonts/InterVariable.woff2) format("woff2");
+  }
+}
+@layer components {
+  .glassyEffect-lg {
+    @apply bg-white/10 backdrop-blur-[20px] shadow-md;
+  }
+  .glassyEffect-md {
+    @apply bg-white/15 backdrop-blur-[20px] shadow-md;
+  }
+  .glassyEffect-sm {
+    @apply bg-white/30 backdrop-blur-[8px] shadow-md;
+  }
+  .glassyEffect-gray {
+    @apply bg-gray-100/30 backdrop-blur-[8px] shadow-md;
+  }
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-weight: 400;
+}
+
+body {
+  margin: 0px;
+  padding: 0px;
+  scroll-behavior: smooth;
+  width: 100%;
+  overflow-x: hidden;
+  background-color: #eeeeee;
+  font-weight: 300;
+}
+
+@media screen and (max-width: 64em) {
+  html {
+    font-size: 62.5%;
+  }
+}
